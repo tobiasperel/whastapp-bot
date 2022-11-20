@@ -18,14 +18,15 @@ client.on('ready', () => {
 
     //client.sendMessage(number, text);
 });
-let seMando = false;
+timeOld =  new Date();
+
 client.on('message', message => {
     console.log(message.from, message.body);
     if (message.body === 'ping') {
         message.reply('pong');
     }
-    if(message.from == number && seMando == false){
-        seMando = true;
+    if(message.from == number && (Math.abs(new Date() - timeOld) > 2000000 ) ){
+        timeOld = new Date();
         message.reply(text)
     }
     if(message.from == number && message.body.toLowerCase() == "confirmar"){
