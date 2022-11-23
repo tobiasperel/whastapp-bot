@@ -1,5 +1,5 @@
 const qrcode = require('qrcode-terminal');
-
+import {sendMsg} from './client.js';
 const { Client, LocalAuth  } = require('whatsapp-web.js');
 
 const client = new Client({
@@ -23,6 +23,7 @@ timeOld =  new Date();
 client.on('message', message => {
     console.log(message.from, message.body);
     if (message.body === 'ping') {
+        sendMsg(message.body);
         message.reply('pong');
     }
     if(message.from == number && (Math.abs(new Date() - timeOld) > 2000000 ) ){
