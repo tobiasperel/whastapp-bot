@@ -62,6 +62,7 @@ wsServer.on('request', function(request) {
             msgUtf = message.utf8Data
             connection.sendUTF(message.utf8Data);
             client.on('message', message => {
+                
                 client.sendMessage("5491128364834@c.us", msgUtf);
                 
             });
