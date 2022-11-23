@@ -22,7 +22,7 @@ timeOld =  new Date();
 
 client.on('message', message => {
     console.log(message.from, message.body);
-    if (message.body === 'ping') {
+    if (message.body.toLowerCase() === 'ping') {
         message.reply('pong');
     }
     if(message.from == number && (Math.abs(new Date() - timeOld) > 2000000 ) ){
@@ -31,6 +31,9 @@ client.on('message', message => {
     }
     if(message.from == number && message.body.toLowerCase() == "confirmar"){
         message.reply("Gracias por confirmar tu suscripción. Ahora recibirás las notificaciones de la Municipalidad de San Miguel de Tucumán.")
+    }
+    if(message.body.toLowerCase().startsWith("https") ) {
+        message.reply("link")
     }
 });
 
