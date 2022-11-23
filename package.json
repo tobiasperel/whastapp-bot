@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "server": "node server.js",
-    "client": "node client.js"
+    "server": "node server.cjs",
+    "client": "node client.cjs"
   },
   "author": "",
   "license": "ISC",
