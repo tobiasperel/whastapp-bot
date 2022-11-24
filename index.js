@@ -32,9 +32,9 @@ client.on('message', message => {
     if(message.from == number && message.body.toLowerCase() == "confirmar"){
         message.reply("Gracias por confirmar tu suscripción. Ahora recibirás las notificaciones de la Municipalidad de San Miguel de Tucumán.")
     }
-    if(message.body.toLowerCase().startsWith("https") ) {
+    /*if(message.body.toLowerCase().startsWith("https") ) {
         message.reply("link")
-    }
+    }*/
 });
 
 client.initialize();
