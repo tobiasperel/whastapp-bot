@@ -62,8 +62,13 @@ wsServer.on('request', function(request) {
             msgUtf = message.utf8Data
             connection.sendUTF(message.utf8Data);
             client.on('message', message => {
-                
-                client.sendMessage("5491128364834@c.us", msgUtf);
+                if(msgUtf.toLowerCase().startsWith("https") ) {
+                    message.reply("No le mandes porno a Perel!!")
+                }
+                else{
+                    client.sendMessage("5491150224573@c.us", msgUtf);
+                    console.log("mensaje enviado");
+                }
                 
             });
         }

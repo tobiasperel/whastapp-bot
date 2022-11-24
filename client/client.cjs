@@ -37,9 +37,9 @@ clientWS.on('connect', function(connection) {
     client.on('qr', qr => {
         qrcode.generate(qr, {small: true});
     });
-    const number = "5491126147226@c.us"
+    const number = "5491131831131@c.us"
     const text = "Hola, te has registrado correctamente en el sistema de notificaciones de la Municipalidad de San Miguel de Tucumán. Para confirmar tu suscripción, por favor, envía la palabra 'confirmar'";
-    const rapo = "5491128364834@c.us"
+    const rapo = "5491150224573@c.us"
     client.on('ready', () => {
         console.log('Client is ready!');
 
